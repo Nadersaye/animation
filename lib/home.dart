@@ -4,6 +4,7 @@ import 'package:animation/Animation/animated_text_style.dart';
 import 'package:flutter/material.dart';
 
 import 'Animation/animated_container.dart';
+import 'Animation/animated_padding.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -32,6 +33,9 @@ class HomeScreen extends StatelessWidget {
             NavigateToAnimatedExample(
                 widget: AnimatedOpacityExample(),
                 text: 'Animated Opacity example'),
+            NavigateToAnimatedExample(
+                widget: AnimatedPaddingExample(),
+                text: 'Animated Padding example'),
           ],
         ),
       ),
