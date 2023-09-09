@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'Animation/animated_container.dart';
 import 'Animation/animated_padding.dart';
 import 'Animation/animated_physical.dart';
+import 'Animation/animated_positioned.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -40,6 +41,9 @@ class HomeScreen extends StatelessWidget {
             NavigateToAnimatedExample(
                 widget: AnimatedPhysicalExample(),
                 text: 'Animated Physical model example'),
+            NavigateToAnimatedExample(
+                widget: AnimatedPositionedExample(),
+                text: 'Animated Positioned example'),
           ],
         ),
       ),
