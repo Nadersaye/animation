@@ -4,9 +4,13 @@ import 'package:animation/Animation/animated_text_style.dart';
 import 'package:flutter/material.dart';
 
 import 'Animation/animated_container.dart';
+import 'Animation/animated_crossfade.dart';
+import 'Animation/animated_liststate.dart';
 import 'Animation/animated_padding.dart';
 import 'Animation/animated_physical.dart';
 import 'Animation/animated_positioned.dart';
+import 'Animation/animated_positioned_directional.dart';
+import 'Animation/animated_switcher.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -44,6 +48,18 @@ class HomeScreen extends StatelessWidget {
             NavigateToAnimatedExample(
                 widget: AnimatedPositionedExample(),
                 text: 'Animated Positioned example'),
+            NavigateToAnimatedExample(
+                widget: AnimatedPositionedDirectionalExample(),
+                text: 'Animated Positioned directional example'),
+            NavigateToAnimatedExample(
+                widget: AnimatedCrossFadeExample(),
+                text: 'Animated Crossfade example'),
+            NavigateToAnimatedExample(
+                widget: AnimatedSwitcherExample(),
+                text: 'Animated Switcher example'),
+            NavigateToAnimatedExample(
+                widget: AnimatedListStateExample(),
+                text: 'Animated ListState example'),
           ],
         ),
       ),
