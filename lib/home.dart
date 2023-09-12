@@ -3,6 +3,7 @@ import 'package:animation/Explicit_Animation/fade_transition.dart';
 import 'package:animation/Explicit_Animation/positioned_directional_transition.dart';
 import 'package:animation/Explicit_Animation/positioned_transition.dart';
 import 'package:animation/Explicit_Animation/rotation_transition.dart';
+import 'package:animation/Explicit_Animation/tween_animated_builder.dart';
 import 'package:flutter/material.dart';
 
 import 'Explicit_Animation/size_transition.dart';
@@ -90,8 +91,12 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: const Color.fromARGB(255, 182, 67, 67),
                 widget: const PositionedDirectionalTransitionExample(),
                 text: 'Positioned Directional Transition Example'),
+            NavigateToAnimatedExample(
+                backgroundColor: const Color.fromARGB(255, 182, 67, 67),
+                widget: const TweenAnimatedBuilderExample(),
+                text: 'Tween Animated Builder Example'),
 
-            //PositionedDirectionalTransitionExample
+            //TweenAnimatedBuilderExample
           ],
         ),
       ),
