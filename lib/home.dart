@@ -1,4 +1,6 @@
+import 'package:animation/Explicit_Animation/animated_builder.dart';
 import 'package:animation/Explicit_Animation/positioned_transition.dart';
+import 'package:animation/Explicit_Animation/rotation_transition.dart';
 import 'package:flutter/material.dart';
 
 import 'Explicit_Animation/size_transition.dart';
@@ -70,6 +72,14 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: const Color.fromARGB(255, 182, 67, 67),
                 widget: const SizeTransitionExample(),
                 text: 'size transition example'),
+            NavigateToAnimatedExample(
+                backgroundColor: const Color.fromARGB(255, 182, 67, 67),
+                widget: const RotationTansitionExample(),
+                text: 'Rotation transition example'),
+            NavigateToAnimatedExample(
+                backgroundColor: const Color.fromARGB(255, 182, 67, 67),
+                widget: const AnimationBuilderExample(),
+                text: 'Animation builder example'),
           ],
         ),
       ),
