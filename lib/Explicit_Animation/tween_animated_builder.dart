@@ -24,6 +24,7 @@ class _TweenAnimatedBuilderExampleState
         children: [
           Center(
             child: TweenAnimationBuilder(
+              curve: Curves.bounceInOut,
               tween: Tween<double>(begin: 0, end: _opacityValue),
               duration: const Duration(seconds: 5),
               builder: (BuildContext context, double value, Widget? child) {

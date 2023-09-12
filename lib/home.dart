@@ -1,5 +1,7 @@
 import 'package:animation/Explicit_Animation/animated_builder.dart';
+import 'package:animation/Explicit_Animation/default_textstyle_transition.dart';
 import 'package:animation/Explicit_Animation/fade_transition.dart';
+import 'package:animation/Explicit_Animation/indexed_stack_transition.dart';
 import 'package:animation/Explicit_Animation/positioned_directional_transition.dart';
 import 'package:animation/Explicit_Animation/positioned_transition.dart';
 import 'package:animation/Explicit_Animation/rotation_transition.dart';
@@ -95,8 +97,14 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: const Color.fromARGB(255, 182, 67, 67),
                 widget: const TweenAnimatedBuilderExample(),
                 text: 'Tween Animated Builder Example'),
-
-            //TweenAnimatedBuilderExample
+            NavigateToAnimatedExample(
+                backgroundColor: const Color.fromARGB(255, 182, 67, 67),
+                widget: const DefaultTextStyleTransitionExample(),
+                text: 'Default TextStyle Transition Example'),
+            NavigateToAnimatedExample(
+                backgroundColor: const Color.fromARGB(255, 182, 67, 67),
+                widget: const IndexedStackTansitionExample(),
+                text: 'Indexed Stack Tansition Example'),
           ],
         ),
       ),
