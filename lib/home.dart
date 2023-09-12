@@ -1,6 +1,7 @@
 import 'package:animation/Explicit_Animation/positioned_transition.dart';
 import 'package:flutter/material.dart';
 
+import 'Explicit_Animation/size_transition.dart';
 import 'Implicit_Animation/animated_align.dart';
 import 'Implicit_Animation/animated_container.dart';
 import 'Implicit_Animation/animated_crossfade.dart';
@@ -65,6 +66,10 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: const Color.fromARGB(255, 182, 67, 67),
                 widget: const PositionedTransitionExample(),
                 text: 'Positioned transition example'),
+            NavigateToAnimatedExample(
+                backgroundColor: const Color.fromARGB(255, 182, 67, 67),
+                widget: const SizeTransitionExample(),
+                text: 'size transition example'),
           ],
         ),
       ),
