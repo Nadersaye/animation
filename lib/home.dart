@@ -6,6 +6,8 @@ import 'package:animation/Explicit_Animation/positioned_directional_transition.d
 import 'package:animation/Explicit_Animation/positioned_transition.dart';
 import 'package:animation/Explicit_Animation/rotation_transition.dart';
 import 'package:animation/Explicit_Animation/tween_animated_builder.dart';
+import 'package:animation/Page_animation/page_mix_fade_size_transition.dart';
+import 'package:animation/Page_animation/page_mix_scale_rotate_transition.dart';
 import 'package:animation/Page_animation/to_next_page.dart';
 import 'package:flutter/material.dart';
 import 'Explicit_Animation/size_transition.dart';
@@ -21,7 +23,10 @@ import 'Implicit_Animation/animated_positioned_directional.dart';
 import 'Implicit_Animation/animated_switcher.dart';
 import 'Implicit_Animation/animated_text_style.dart';
 import 'Page_animation/page_fade_transition.dart';
+import 'Page_animation/page_rotation_transition.dart';
 import 'Page_animation/page_scale_transition.dart';
+import 'Page_animation/page_size_transition.dart';
+import 'Page_animation/page_slide_transition.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -123,6 +128,46 @@ class HomeScreen extends StatelessWidget {
                       .push(PageScaleTransation(const NextScreen()));
                 },
                 child: const Text('Page scale transation')),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple),
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(PageRotationTransation(const NextScreen()));
+                },
+                child: const Text('Page rotation transation')),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple),
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(PageSlideTransation(const NextScreen()));
+                },
+                child: const Text('Page slide transation')),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple),
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(PageSizeTransation(const NextScreen()));
+                },
+                child: const Text('Page size transation')),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple),
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(PageMixFadeSizeTransation(const NextScreen()));
+                },
+                child: const Text('Page Mix Fade Size Transation')),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple),
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(PageMixScaleRotationTransation(const NextScreen()));
+                },
+                child: const Text('Page mix scale rotate transation')),
           ],
         ),
       ),
