@@ -6,8 +6,8 @@ import 'package:animation/Explicit_Animation/positioned_directional_transition.d
 import 'package:animation/Explicit_Animation/positioned_transition.dart';
 import 'package:animation/Explicit_Animation/rotation_transition.dart';
 import 'package:animation/Explicit_Animation/tween_animated_builder.dart';
+import 'package:animation/Page_animation/to_next_page.dart';
 import 'package:flutter/material.dart';
-
 import 'Explicit_Animation/size_transition.dart';
 import 'Implicit_Animation/animated_align.dart';
 import 'Implicit_Animation/animated_container.dart';
@@ -20,6 +20,8 @@ import 'Implicit_Animation/animated_positioned.dart';
 import 'Implicit_Animation/animated_positioned_directional.dart';
 import 'Implicit_Animation/animated_switcher.dart';
 import 'Implicit_Animation/animated_text_style.dart';
+import 'Page_animation/page_fade_transition.dart';
+import 'Page_animation/page_scale_transition.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -105,6 +107,22 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: const Color.fromARGB(255, 182, 67, 67),
                 widget: const IndexedStackTansitionExample(),
                 text: 'Indexed Stack Tansition Example'),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple),
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(PageFadeTransation(const NextScreen()));
+                },
+                child: const Text('Page fade transation')),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple),
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(PageScaleTransation(const NextScreen()));
+                },
+                child: const Text('Page scale transation')),
           ],
         ),
       ),
