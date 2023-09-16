@@ -6,6 +6,7 @@ import 'package:animation/Explicit_Animation/positioned_directional_transition.d
 import 'package:animation/Explicit_Animation/positioned_transition.dart';
 import 'package:animation/Explicit_Animation/rotation_transition.dart';
 import 'package:animation/Explicit_Animation/tween_animated_builder.dart';
+import 'package:animation/More_animations/lottie_slider_example.dart';
 import 'package:animation/Page_animation/page_mix_fade_size_transition.dart';
 import 'package:animation/Page_animation/page_mix_scale_rotate_transition.dart';
 import 'package:animation/Page_animation/to_next_page.dart';
@@ -168,6 +169,11 @@ class HomeScreen extends StatelessWidget {
                       .push(PageMixScaleRotationTransation(const NextScreen()));
                 },
                 child: const Text('Page mix scale rotate transation')),
+            NavigateToAnimatedExample(
+              widget: const LottieSliderExample(),
+              text: 'lottie slider example',
+              backgroundColor: Colors.deepOrange,
+            ),
           ],
         ),
       ),
